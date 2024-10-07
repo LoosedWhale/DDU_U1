@@ -1,0 +1,205 @@
+@font-face {
+    font-family: Kanit;
+    src: url("../font/Kanit-Regular.ttf");
+}
+
+body{
+    line-height: 1.3;
+    margin: 0;
+}
+
+p, h1, h2, h3, li{
+    font-family: Kanit;
+}
+
+p, li{
+    font-size: 14px;
+}
+
+
+
+#mainframe{
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+
+
+header{
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#namebox, nav {
+    font-weight: bold;
+    font-size: 16px;
+    font-family: Helvetica;
+    align-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    flex-basis: content;  
+}
+
+
+nav a{
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+nav a:active{
+    color: #3B3C40;
+    text-decoration: none;
+}
+
+
+
+main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5px;
+}
+
+main div img{
+    border-radius: 20px 20px;
+    padding: 10px;
+    text-align: center;
+    width: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+
+main div img:hover{
+    transform: rotateX(180deg);
+}
+
+#whoamI, #sumInfo{
+    margin: 10px;
+    border-radius: 10px;
+}
+
+ul{
+    padding: 20px;
+    padding-left: 30px;
+}
+
+ol{
+    padding-left: 20px;
+    list-style-type: upper-roman;
+}
+
+#whoamI p,h1{padding:10px;}
+
+#whoamI h1{
+    margin-top: 0;
+    text-align: center;
+}
+
+
+
+#mainhobby{
+    display: grid;
+    grid-template-rows: 1fr 2.2fr;
+    gap: 5px;
+}
+
+#hobbyimg{
+    background-image: url("../img/IMG_hobby.JPG"); 
+    background-position: bottom -75px center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+#hobbyimg h2{
+    align-content: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3b3c40a3;
+}
+
+#hobbytextbox{padding: 10px;}
+
+#hobbytextbox div{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#hobbytextbox h1{
+    text-align: center;
+    margin: 0;
+}
+
+
+
+#mainqna{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.qnaimg{
+    background-image: url("../img/IMG_qna.JPG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-row: 1; 
+    grid-column: span 3;
+    padding: 20px;
+    border-radius: 10px;
+}
+.qnaone, .qnatwo, .qnathree{
+    padding: 10px;
+    grid-row: 2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.qnaone h3, .qnatwo h3, .qnathree h3 {margin: 0;}
+
+
+
+footer{
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+
+.hasOutline{border: 2px solid #3B3C40;}
+
+.theme-bg-gray { background-color: #3B3C40;}
+.theme-bg-beige { background-color: #F2E2C4;}
+.theme-bg-brown { background-color: #A67A46;}
+.theme-bg-tan { background-color: #F2CA99; }
+.theme-bg-black { background-color: #0D0D0D; }
+
+.theme-gray { color: #3B3C40;}
+.theme-beige { color: #F2E2C4;}
+.theme-brown { color: #A67A46;}
+.theme-tan { color: #F2CA99;}
+.theme-black { color: #0D0D0D; }
+
+
+@media (max-width: 750px){
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #mainhobby{display: block;}
+    #hobbyimg{display: none;}
+    #mainqna{display: block;}
+    .qnaimg{display: none;}
+    .qnaone, .qnatwo, .qnathree{margin-bottom: 10px;}
+}
